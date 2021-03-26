@@ -6,14 +6,13 @@ DECLARE
     
 BEGIN
 
-	DBMS_OUTPUT.PUT_LINE('YOU HAVE NOT SELECTED THE RIGHT OPTION. ');	
+	DBMS_OUTPUT.PUT_LINE('Welcome. ');	
 END;
 /
 
-@"C:\Users\jahid\Desktop\DBBS Project- Online Perfume Store\perfume.sql"
-@"C:\Users\jahid\Desktop\DBBS Project- Online Perfume Store\alcoholFreePerfume.sql"
-@"C:\Users\jahid\Desktop\DBBS Project- Online Perfume Store\orderListAndWishList.sql"
-@"C:\Users\jahid\Desktop\DBBS Project- Online Perfume Store\orderDetails.sql"
-@"C:\Users\jahid\Desktop\DBBS Project- Online Perfume Store\perfumePack.sql"
-@"C:\Users\jahid\Desktop\DBBS Project- Online Perfume Store\perfumePack.sql"
-@"C:\Users\jahid\Desktop\DBBS Project- Online Perfume Store\main.sql"
+@"G:\Our University Project\4.1 DBBS Project- Online Perfume Store\perfume.sql"
+@"G:\Our University Project\4.1 DBBS Project- Online Perfume Store\alcoholFreePerfume.sql"
+@"G:\Our University Project\4.1 DBBS Project- Online Perfume Store\orderListAndWishList.sql"
+@"G:\Our University Project\4.1 DBBS Project- Online Perfume Store\orderDetails.sql"
+@"G:\Our University Project\4.1 DBBS Project- Online Perfume Store\perfumePack.sql"
+@"G:\Our University Project\4.1 DBBS Project- Online Perfume Store\main.sql"

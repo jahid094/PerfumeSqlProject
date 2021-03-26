@@ -120,7 +120,7 @@ CREATE OR REPLACE PACKAGE BODY perfumePack AS
 	PROCEDURE confirmOrder
 	IS
 		TotalPrice perfumeOrderList.price%TYPE := 0;
-		Id integer := 0;
+		Id integer := 569;
 		--num integer := 0;
 		PID perfumeOrderList.pid%TYPE;
 		PNAME perfumeOrderList.pname%TYPE;
@@ -130,13 +130,14 @@ CREATE OR REPLACE PACKAGE BODY perfumePack AS
 		PRICE perfumeOrderList.price%TYPE;
 	BEGIN
 		TotalPrice := perfumePack.TOTALCOST('TRUE');
-		select orderId.nextval into Id from orderNumber;
-		INSERT into orderNumber values(Id, TotalPrice );
+		--Id := orderVal.nextval;
+		--select orderVal.nextval into Id from orderNumber;
+		INSERT into orderNumber values(orderVal.nextval, TotalPrice );
 		
 		
 		DBMS_OUTPUT.PUT_LINE('CONFIRM');
 		DBMS_OUTPUT.PUT_LINE(TotalPrice);
-		DBMS_OUTPUT.PUT_LINE(Id);
+		--DBMS_OUTPUT.PUT_LINE(Id);
 		
 		FOR R IN (SELECT * FROM perfumeOrderList) LOOP
 			-- SELECT Count(pid) INTO num FROM perfumeOrderList WHERE pid = R.pid;
@@ -155,7 +156,7 @@ CREATE OR REPLACE PACKAGE BODY perfumePack AS
 					CAPACITY := S.capacity;
 					GENDER := S.gender;
 					PRICE := S.price;
-					INSERT into orderDetails values(Id, PID, PNAME, BRAND, CAPACITY, GENDER, PRICE);
+					INSERT into orderDetails values(orderVal.currval, PID, PNAME, BRAND, CAPACITY, GENDER, PRICE);
 				END IF;
 			END LOOP;
 
